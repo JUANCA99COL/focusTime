@@ -11,17 +11,18 @@ import Constants from 'expo-constants';
 import { colors } from './src/utils/colors';
 import { Focus } from './src/features/Focus';
 import { Timer } from './src/features/Timer';
-import { FocusHistory } from './src/features/focusHistory'
+import { FocusHistory } from './src/features/FocusHistory';
+
 
 export default function App() {
-  const [currentSubject, setCurrentSubject] = useState('test');
-  const [history, setHistory ] = useState([]);
+  const [currentSubject, setCurrentSubject] = useState();
+  const [history, setHistory] = useState([]);
   return (
     <SafeAreaView style={styles.container}>
       {!currentSubject ? (
         <>
-        <Focus addSubject={setCurrentSubject} />
-        <FocusHistory history={history} />
+          <Focus addSubject={setCurrentSubject} />
+          <FocusHistory history={history} />
         </>
       ) : (
         <Timer 
@@ -29,7 +30,7 @@ export default function App() {
           onTimerEnd={(subject) => {
             setHistory([...history, subject])
           }}
-          clearSubject={() => {setCurrentSubject(null)}}
+          clearSubject={() => setCurrentSubject(null)}
         />
       )}
     </SafeAreaView>
