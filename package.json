@@ -6,6 +6,8 @@
     "deploy": "gh-pages -d build",
     "start": "expo start",
     "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
@@ -21,11 +23,24 @@
     "react-dom": "18.2.0",
     "react-native": "0.71.8",
     "react-native-paper": "4.11.2",
-    "react-native-web": "~0.18.10"
+    "react-native-web": "~0.18.10",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "gh-pages": "^6.0.0"
   },
-  "private": true
+  "private": true,
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
