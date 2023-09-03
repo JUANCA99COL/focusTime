@@ -1,6 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "homepage": "https://JUANCA99COL.github.io/focusTime",
+  "homepage": "https://github.com/JUANCA99COL/focusTime",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -30,7 +30,7 @@
     "@babel/core": "^7.20.0",
     "gh-pages": "^6.0.0"
   },
-  "private": true,
+  "private": false,
   "browserslist": {
     "production": [
       ">0.2%",
